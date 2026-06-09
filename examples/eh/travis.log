@@ -1,0 +1,1019 @@
+Command line:
+"/home/jingenm1_hpc/bin/travis_dev -beta -p /lustre/scratch/data/pzaby_hpc-conduct_md/CLP_1000IP/pol_dens_eq/1/prod/extra_high_dump_freq/traj_prod.lmp -i input.txt"
+
+
+  ________                                 __
+ /        |                               /  |
+ ########/ ______    ______    __     __  ##/    _______
+    ## |  /      \  /      \  /  \   /  | /  |  /       |
+    ## | /######  | ######  | ##  \ /##/  ## | /#######/
+    ## | ## |  ##/  /    ## |  ##  /##/   ## | ##      \
+    ## | ## |      /####### |   ## ##/    ## |  ######  |
+    ## | ## |      ##    ## |    ###/     ## | /     ##/
+    ##/  ##/        #######/      #/      ##/  #######/
+
+    TRajectory Analyzer and VISualizer  -  Open-source free software under GNU GPL v3
+
+    Copyright (c) Martin Brehm      (2009-2024), University of Paderborn
+                  Barbara Kirchner  (2009-2024), University of Bonn
+                  Martin Thomas     (2012-2017)
+                  Sascha Gehrke     (2016-2020)
+
+    http://www.travis-analyzer.de
+
+    Please cite: J. Chem. Phys. 2020, 152 (16), 164105.         (DOI 10.1063/5.0005078 )
+                 J. Chem. Inf. Model. 2011, 51 (8), 2007-2023.  (DOI 10.1021/ci200217w )
+
+    There is absolutely no warranty on any results obtained from TRAVIS.
+
+ #  Beta features enabled
+ #  Running on node153 at Thu Jun  4 15:06:16 2026 (PID 153840)
+ #  Running in /lustre/scratch/data/jingenm1_hpc-conductivity/travis/CLP_1000_trajs/long_clpol_density/cordepth/30000
+ #  Version: Jan 23 2025, built at Jun  4 2026, 14:40:28, compiler "11.5.0 20240719 (Red Hat 11.5.0-5)", GCC 11.5.0
+ #  Target platform: Linux, __cplusplus=201103L, Compile flags: DEBUG_ARRAYS 
+ #  Machine: x86_64, char=8bits, int=4b, long=8b, addr=8b, 0xA0B0C0D0=D0,C0,B0,A0.
+ #  Home: /home/jingenm1_hpc,  Executable: /home/jingenm1_hpc/bin/travis_dev
+ #  Input from input.txt, Output is redirected
+
+    >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
+
+    Loading configuration from /home/jingenm1_hpc/.travis.conf ...
+      TRAVIS version has changed. You should write a new configuration file (specify "-writeconf").
+
+
+    This is the BETA MODE of TRAVIS. You need to read and acknowledge the following facts:
+
+    (1) The features in beta mode are not well tested or documented
+        (this is why they are in beta mode). Expect bugs or wrong results.
+
+    (2) TRAVIS versions with beta mode enabled may only be used by members
+        of the Kirchner/Sebastiani group and associated/cooperating persons. Please
+        do not distribute or share this group-internal build of TRAVIS.
+
+    (3) The analyses in beta mode mostly have not been published yet by the authors.
+        Please do not use results from such analyses in your publications, unless you
+        have the explicit permission to do so from the TRAVIS developer team.
+
+    I have read and acknowledged these facts and will obey them (y/n). [no] y
+
+    Opening position trajectory /lustre/scratch/data/pzaby_hpc-conduct_md/CLP_1000IP/pol_dens_eq/1/prod/extra_high_dump_freq/traj_prod.lmp ...
+    Analyzing LAMMPS trajectory column definition:
+      - Field  1: element 
+      - Field  2: xu      
+      - Field  3: yu      
+      - Field  4: zu      
+      - Field  5: vx      
+      - Field  6: vy      
+      - Field  7: vz      
+    Found 7 columns in total.
+
+    CTimeStep::ReadLAMMPS(): Warning: The "id" field is not present in the trajectory.
+
+    This is fine as long as you use "dump_modify sort id" to write your trajectory.
+    Otherwise, the atom ordering will be random, and TRAVIS has no chance to detect it,
+    which will lead to *wrong* analysis results!
+
+    If in doubt, you should use a LAMMPS dump style similar to the following:
+      "dump custom id element xu yu zu"
+
+    I have acknowledged this note (y/n). [no] y
+
+    Found atomic velocities in LAMMPS trajectory.
+
+    Trajectory contains approximately 500107 frames (just a *guess* from the file size of 676.58 GiB).
+
+    24000 atoms in the system: 8000x C, 11000x H, 5000x N
+
+    System extent:  X = { -27352 .. +31032 pm }, dX = 58384 pm
+      (in step 1)   Y = { -25820 .. +32399 pm }, dY = 58219 pm
+                    Z = { -23937 .. +30636 pm }, dZ = 54573 pm
+
+    The "advanced mode" offers seldomly required features, including support for non-orthorhombic
+    simulation cells, NPT ensemble, non-periodic systems, user-definded virtual atoms, pseudomolecules, ...
+
+    Use the advanced mode until the analysis selection menu (y/n)? [no] <RETURN>
+
+    Found cell geometry data in trajectory file:
+
+      X = 6484.71 pm,   Y = 6484.71 pm,   Z = 6484.71 pm
+
+    The overall box density is 1.079090 g/cm^3.
+
+    Assuming a 3D-periodic cell.
+
+    Use these values (y) or enter different values (n)? [yes] <RETURN>
+    Update cell geometry in every time step (i.e., NPT ensemble) (y) or use fixed cell (n)? [yes] <RETURN>
+
+    Using the following element data:
+
+      Element | Ord. Number |  Mass / u | Cov. Radius / pm | VdW Radius / pm | Color
+    ----------|-------------|-----------|------------------|-----------------|----------
+      H       |           1 |   1.00798 |            37.00 |          109.00 | #FFFFFF
+      C       |           6 |  12.01060 |            82.00 |          170.00 | #808080
+      N       |           7 |  14.00690 |            77.00 |          155.00 | #0000FF
+
+
+    NPT: Using a cell vector of ( 6484.71 pm | 6484.71 pm | 6484.71 pm ) for molecule recognition.
+
+    Initialized spatial domain engine with 34 x 34 x 34 cells, min. diameter = 189 pm.
+
+    Molecule recognition [###########################################################]
+
+    2000 molecules found.
+
+    Molecule recognition took 0.0036 seconds.
+
+    Sorting atom types...
+    Setting up bond lists...
+    Building atom codes...
+    Creating refined topological atom order...
+      [############################################################] Done.
+    Creating bond list...
+    Creating angle list...
+    Grouping together equivalent molecules...
+    Found 2 unique molecule types.
+    Sorting molecule types by molecular mass...
+    Found 1 rings.
+    Refining ring systems...
+    Assigning ring systems to molecule types...
+    Sorting rings by size...
+    Molecule recognition finished.
+
+Output of bond matrices:
+
+*** Molecule 1: C6H11N2; Representant 1; Distances in pm ***
+    (ring bonds are shown in green)
+
+    C1  C2  C3  C4  C5  C6  H1  H2  H3  H4  H5  H6  H7  H8  H9  H10 H11 N1  N2 
+C1  ***  -   -   -   -   -  108  -   -   -   -   -   -   -   -   -   -  133 127 
+C2   -  ***  -   -   -  150  -  109 109  -   -   -   -   -   -   -   -  143  -  
+C3   -   -  *** 136  -   -   -   -   -  108  -   -   -   -   -   -   -  132  -  
+C4   -   -  136 ***  -   -   -   -   -   -  108  -   -   -   -   -   -   -  140 
+C5   -   -   -   -  ***  -   -   -   -   -   -  109 109 109  -   -   -   -  151 
+C6   -  150  -   -   -  ***  -   -   -   -   -   -   -   -  109 109 109  -   -  
+H1  108  -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -  
+H2   -  109  -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -  
+H3   -  109  -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -  
+H4   -   -  108  -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -  
+H5   -   -   -  108  -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -  
+H6   -   -   -   -  109  -   -   -   -   -   -  ***  -   -   -   -   -   -   -  
+H7   -   -   -   -  109  -   -   -   -   -   -   -  ***  -   -   -   -   -   -  
+H8   -   -   -   -  109  -   -   -   -   -   -   -   -  ***  -   -   -   -   -  
+H9   -   -   -   -   -  109  -   -   -   -   -   -   -   -  ***  -   -   -   -  
+H10  -   -   -   -   -  109  -   -   -   -   -   -   -   -   -  ***  -   -   -  
+H11  -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -  ***  -   -  
+N1  133 143 132  -   -   -   -   -   -   -   -   -   -   -   -   -   -  ***  -  
+N2  127  -   -  140 151  -   -   -   -   -   -   -   -   -   -   -   -   -  *** 
+
+    5-ring: C1 - N1 - C3 - C4 - N2
+
+    Atoms H2, H3 are equivalent.
+    Atoms H6, H7, H8 are equivalent.
+    Atoms H9, H10, H11 are equivalent.
+
+*** Molecule 2: C2N3; Representant 1; Distances in pm ***
+
+    C1  C2  N1  N2  N3 
+C1  ***  -  135 117  -  
+C2   -  *** 131  -  113 
+N1  135 131 ***  -   -  
+N2  117  -   -  ***  -  
+N3   -  113  -   -  *** 
+
+    Atoms C1, C2 are equivalent.
+    Atoms N2, N3 are equivalent.
+
+
+*** The following 2 kinds of molecules have been recognized:
+    (ordered by molecular mass)
+
+  - Molecule 1:  C6H11N2 (1000 pieces, 111.17 g/mol)
+      (14 noneq. atoms, 14 noneq. bonds, 23 noneq. angles)
+      Concentration:   6.089431 mol/liter
+      Detected 1 ring:
+         1.)  5-ring: C1 - N1 - C3 - C4 - N2
+
+  - Molecule 2:  C2N3 (1000 pieces, 66.04 g/mol)
+      (3 noneq. atoms, 2 noneq. bonds, 2 noneq. angles)
+      Concentration:   6.089431 mol/liter
+
+
+    If you switch on "USE_OPENBABEL" in config.h, TRAVIS can print SMILES strings of your molecules.
+
+    You can create images of the structural formulas with the atom labels for easier
+    identification of the atoms (requires installed GraphViz package - see www.graphviz.org).
+
+    Create images of the structural formulas (y/n)? [no] <RETURN>
+
+    Accept these molecules (y) or change something (n)? [yes] <RETURN>
+
+    Uniting molecules which have been broken by wrapping...
+
+    Determining maximum molecular diameters...
+
+    Found the following maximal molecular diameters:
+
+      (*) Molecule 1 (C6H11N2):    792.20 pm
+
+      (*) Molecule 2 (C2N3):       461.18 pm
+
+
+    The atoms are currently ordered by topological priority.
+
+    Defining virtual atom #1 as molecular Center of Geometry:
+      - C6H11N2...
+      - C2N3...
+
+    Defining virtual atom #2 as molecular Center of Mass:
+      - C6H11N2...
+      - C2N3...
+
+    Defining ring centers in C6H11N2:
+      - Defining #3 as Center of Ring 1: C1 - N1 - C3 - C4 - N2
+
+    Defining molecular dipole vectors:
+
+      The last virtual atom of each molecule is defined as the tip of the dipole vector
+      starting in center of mass (#2). 1 Debye corresponds to 100 pm of vector length.
+      Only useful if dipole/charge data is provided. Otherwise vector has always length of zero.
+
+      - Dipole vector #2 --> #4 in C6H11N2 ...
+      - Dipole vector #2 --> #3 in C2N3 ...
+
+>>> 7 virtual atoms have been defined: >>>
+
+    #1 in C6H11N2: Center of Geometry.
+    #2 in C6H11N2: Center of Mass.
+
+    #3 in C6H11N2 - defined through center:
+      -  C1    Weight 20.00%
+      -  C3    Weight 20.00%
+      -  C4    Weight 20.00%
+      -  N1    Weight 20.00%
+      -  N2    Weight 20.00%
+
+    #4 in C6H11N2 - tip of molecular dipole vector starting in #2.
+
+    #1 in C2N3: Center of Geometry.
+    #2 in C2N3: Center of Mass.
+
+    #3 in C2N3 - tip of molecular dipole vector starting in #2.
+
+<<< End of virtual atoms <<<
+
+
+>>> List of functions <<<
+
+ *** Static (time independent) Functions
+ cdf      - Combined Distribution Function
+ rdf      - Radial Distribution Function
+ adf      - Angular Distribution Function
+ ddf      - Dihedral Distribution Function
+ pldf     - Point-Plane Distance Distribution
+ lidf     - Point-Line Distance Distribution
+ plproj   - Plane Projection Distribution
+ dprof    - Fixed Plane Density Profile
+ fpp      - Fixed Plane Projection
+ dens     - Density Distribution Function
+ sdf      - Spatial Distribution Function
+ psdf     - Pseudo SDF (only 2 ref. atoms)
+ dip      - Dipole Distribution Function
+ cond     - Evaluate Structural Condition
+ sfac     - Compute Structure Factor
+ agtopo   - Aggregation Topology Analysis
+ sankey   - Sankey diagram plot
+ cmat     - Contact Matrix / Connection Matrix
+ geodens  - Particle Density inside Geometric Object
+ conduct2 - Ionic Conductivity2 Analysis
+ gentup   - Generalized Tuple Analysis
+ sprop    - Static Material Properties (multipoles, ...)
+ nbh      - Neighborhood Analysis
+ chdf     - Charge Distribution Function
+ fosdf    - Floating Orbital Spatial Distribution Function
+ rchdf    - Spatial Charge Distribution Function
+ bstat    - Bonded Interaction Statistics
+
+ *** Dynamic (time dependent) Functions
+ vdf      - Velocity Distribution Function
+ fdf      - Force Distribution Function
+ msd      - Mean Square Displacement / Diffusion Coefficients
+ acf      - Velocity Autocorrelation Functions
+ rdyn     - Vector Reorientation Dynamics
+ vhcf     - Van Hove Correlation Function
+ aggr     - Aggregation Functions (DACF, DLDF, DDisp)
+ hbond    - Hydrogen Bond Dynamics
+ ionpair  - Diffusion Corrected Ion Pair Dynamics
+ tddf     - Time Dependent Distribution Functions
+ conduct  - Ionic Conductivity Analysis
+ reflux   - Generalized Reactive Flux Analysis
+ dprop    - Dynamic Material Properties (multipoles, ...)
+ disso    - Dissociation Screening
+ nbex     - Neighborhood Exchange Functions
+ therm    - Thermodynamic Functions
+ markov   - Markov Model Analysis
+
+ *** Spectroscopic Functions
+ spec     - New Spectroscopy Module (IR, Raman, VCD, ROA)
+ power    - Calculate Power Spectrum
+ nc       - Normal Coordinate Analysis
+ ir       - (old) Calculate IR Spectrum
+ raman    - (old) Calculate Raman Spectrum
+ vcd      - (old) Calculate VCD Spectrum
+ irgrid   - Calculate IR Grid Spectrum
+ dpol     - Dynamic Polarizability
+ sfg      - Calculate SFG Spectrum
+ rera     - Calculate Resonance Raman Spectrum
+ drst     - Save Dipole Restart File
+ mrst     - Save Magnetic Moment Restart File
+ pol      - Set up Polarizability Calculation
+
+ *** Miscellaneous Functions
+ env      - Save Trajectory of RM Environment / TDO Plot
+ proc     - Save Processed Trajectory
+ cut      - Cut Clusters
+ reg      - Region-specific Analysis
+ chi      - Chirality Analysis
+ eck      - Transform to Eckart Frame
+ swan     - Sort Wannier Centers
+ voro     - Basic Voronoi Analysis
+ vori     - Voronoi Integration Functions
+ vorochg  - Voronoi Charge Optimization
+ doma     - Domain Analysis
+ order    - Order Parameters
+ hole     - Hole Theory based Analysis
+ cla      - Cluster Analysis
+ void     - Void Analysis
+ react    - Reaction Tracking
+ resp     - Run CP2k RESP Calculation
+ ffgen    - Force Field Generation
+ mic      - Microheterogeneity Analysis
+ fesa     - Free Energy Surface Analysis
+ scale    - Scale Trajectory Amplitude
+ fma      - Force Matching
+ grot     - Grotthus Analysis Tools
+ nano     - Nanoparticle analysis (pre-alpha)
+ hyb      - Setup hybrid CP2k sim. (QM+force field)
+ cutdim   - Cut Dimers
+ coordgeo - Coordination Geometry Analysis
+
+   (You may specify multiple analyses at once, but
+    the safe way is to perform only one kind of analysis at a time.)
+
+    Which functions to compute (comma separated)? conduct
+
+ conduct - Ionic Conductivity Analysis
+
+    The advanced mode includes some options which are quite powerful,
+    yet possibly weird or seldomly required.
+
+    Use the advanced mode for the main part (y/n)? [no] <RETURN>
+
+    Enter the physical time distance between successive trajectory frames in fs: [0.5] 20
+
+    >>> Conductivity Observation >>>
+
+
+        Include molecule 1 (C6H11N2) in conductivity calculation? [yes] <RETURN>
+        Enter the charge of the molecule: [1.0] 1
+        Which atom to take to represent molecule C6H11N2 (e.g. "C1,O3")? [#2] <RETURN>
+
+        Include molecule 2 (C2N3) in conductivity calculation? [yes] <RETURN>
+        Enter the charge of the molecule: [1.0] -1
+        Which atom to take to represent molecule C2N3 (e.g. "C1,O3")? [#2] <RETURN>
+
+        Including the following molecules:
+        1000 C6H11N2   
+        1000 C2N3      
+
+        Enter the temperature in K: [300.0] 353.15
+
+        Use the Green-Kubo formulation (y) or the Einstein displacement (n)? [no] <RETURN>
+
+        Einstein displacement will be used to calculate the conductivity.
+
+        The correlation depth of the collective MSD determines the maximum temporal distance
+         between two trajectory frames to be considered, and the maximum correlation time on the
+         horizontal axis. It has nothing to do with selecting a certain part of the trajectory.
+         The full trajectory is always used to compute the collective MSD, unless otherwise specified further below.
+
+        Note: The correlation depth should not be larger than ~30% of the total trajectory step count.
+
+        Enter the depth (in timesteps) of the correlation: [150032] 30000
+
+        Taking every 30. data point for the collective MSD plot.
+        Shifting correlation window 30 steps at once.
+        If you have to change these settings, use the "advanced mode".
+
+        Compute uncertainty for Conductivity (experimental!) (y/n)? [no] y
+
+        Use decomposition of the conductivity into contributions from all charged species? [no] y
+
+        Use mass-fixed (0), number-fixed (1) or solvent-fixed (2) frame of reference? [0] <RETURN>
+
+
+    <<< End of Conductivity Observation <<<
+
+
+    Not wrapping molecules into the box.
+
+    Not removing center of mass movement of the box.
+
+    In which trajectory frame to start processing the trajectory? [1] <RETURN>
+    How many trajectory frames to read (from this position on)? [all] <RETURN>
+    Use every n-th read trajectory frame for the analysis: [1] <RETURN>
+
+    Using 500107 time steps: Every 1st within range 1 - approx. 500107.
+
+########## All information collected ##########
+
+>>> Initialization >>>
+
+
+<<< End of Initialization <<<
+
+
+##########   Starting Main Pass   ##########
+
+Hint: Press CTRL+C once to softly interrupt analysis and still write the results.
+      Creating an empty file named EXIT ("touch EXIT") has the same effect.
+
+Step      0 ..................................................
+Step     50 .................................................. ETA  1h03m22s
+Step   1050 .................................................. ETA  1h08m50s
+Step   2050 .................................................. ETA  1h07m54s
+Step   3050 .................................................. ETA  1h09m24s
+Step   4050 .................................................. ETA  1h10m15s
+Step   5050 .................................................. ETA  1h09m24s
+Step   6050 .................................................. ETA  1h09m56s
+Step   7050 .................................................. ETA  1h10m17s
+Step   8050 .................................................. ETA  1h10m32s
+Step   9050 .................................................. ETA  1h10m42s
+Step  10050 .................................................. ETA  1h10m04s
+Step  11050 .................................................. ETA  1h10m12s
+Step  12050 .................................................. ETA  1h10m17s
+Step  13050 .................................................. ETA  1h10m20s
+Step  14050 .................................................. ETA  1h10m22s
+Step  15050 .................................................. ETA  1h09m52s
+Step  16050 .................................................. ETA  1h09m53s
+Step  17050 .................................................. ETA  1h09m52s
+Step  18050 .................................................. ETA  1h09m51s
+Step  19050 .................................................. ETA  1h09m50s
+Step  20050 .................................................. ETA  1h09m47s
+Step  21050 .................................................. ETA  1h09m22s
+Step  22050 .................................................. ETA  1h09m20s
+Step  23050 .................................................. ETA  1h09m16s
+Step  24050 .................................................. ETA  1h09m13s
+Step  25050 .................................................. ETA  1h09m09s
+Step  26050 .................................................. ETA  1h08m47s
+Step  27050 .................................................. ETA  1h08m43s
+Step  28050 .................................................. ETA  1h08m38s
+Step  29050 .................................................. ETA  1h08m33s
+Step  30050 .................................................. ETA  1h08m28s
+Step  31050 .................................................. ETA  1h08m09s
+Step  32050 .................................................. ETA  1h08m18s
+Step  33050 .................................................. ETA  1h07m58s
+Step  34050 .................................................. ETA  1h07m53s
+Step  35050 .................................................. ETA  1h07m47s
+Step  36050 .................................................. ETA  1h07m41s
+Step  37050 .................................................. ETA  1h07m35s
+Step  38050 .................................................. ETA  1h07m29s
+Step  39050 .................................................. ETA  1h07m23s
+Step  40050 .................................................. ETA  1h07m17s
+Step  41050 .................................................. ETA  1h07m10s
+Step  42050 .................................................. ETA  1h07m03s
+Step  43050 .................................................. ETA  1h06m57s
+Step  44050 .................................................. ETA  1h06m50s
+Step  45050 .................................................. ETA  1h06m43s
+Step  46050 .................................................. ETA  1h06m36s
+Step  47050 .................................................. ETA  1h06m29s
+Step  48050 .................................................. ETA  1h06m21s
+Step  49050 .................................................. ETA  1h06m14s
+Step  50050 .................................................. ETA  1h06m07s
+Step  51050 .................................................. ETA  1h05m59s
+Step  52050 .................................................. ETA  1h05m52s
+Step  53050 .................................................. ETA  1h05m44s
+Step  54050 .................................................. ETA  1h05m37s
+Step  55050 .................................................. ETA  1h05m29s
+Step  56050 .................................................. ETA  1h05m21s
+Step  57050 .................................................. ETA  1h05m14s
+Step  58050 .................................................. ETA  1h05m06s
+Step  59050 .................................................. ETA  1h04m58s
+Step  60050 .................................................. ETA  1h04m50s
+Step  61050 .................................................. ETA  1h04m49s
+Step  62050 .................................................. ETA  1h04m41s
+Step  63050 .................................................. ETA  1h04m33s
+Step  64050 .................................................. ETA  1h04m25s
+Step  65050 .................................................. ETA  1h04m24s
+Step  66050 .................................................. ETA  1h04m15s
+Step  67050 .................................................. ETA  1h04m07s
+Step  68050 .................................................. ETA  1h03m59s
+Step  69050 .................................................. ETA  1h03m50s
+Step  70050 .................................................. ETA  1h03m42s
+Step  71050 .................................................. ETA  1h03m34s
+Step  72050 .................................................. ETA  1h03m25s
+Step  73050 .................................................. ETA  1h03m17s
+Step  74050 .................................................. ETA  1h03m08s
+Step  75050 .................................................. ETA  1h03m00s
+Step  76050 .................................................. ETA  1h02m52s
+Step  77050 .................................................. ETA  1h02m43s
+Step  78050 .................................................. ETA  1h02m35s
+Step  79050 .................................................. ETA  1h02m26s
+Step  80050 .................................................. ETA  1h02m18s
+Step  81050 .................................................. ETA  1h02m09s
+Step  82050 .................................................. ETA  1h02m01s
+Step  83050 .................................................. ETA  1h01m52s
+Step  84050 .................................................. ETA  1h01m44s
+Step  85050 .................................................. ETA  1h01m35s
+Step  86050 .................................................. ETA  1h01m26s
+Step  87050 .................................................. ETA  1h01m18s
+Step  88050 .................................................. ETA  1h01m09s
+Step  89050 .................................................. ETA  1h01m01s
+Step  90050 .................................................. ETA  1h00m52s
+Step  91050 .................................................. ETA  1h00m43s
+Step  92050 .................................................. ETA  1h00m35s
+Step  93050 .................................................. ETA  1h00m26s
+Step  94050 .................................................. ETA  1h00m18s
+Step  95050 .................................................. ETA  1h00m09s
+Step  96050 .................................................. ETA  1h00m00s
+Step  97050 .................................................. ETA 59m47s
+Step  98050 .................................................. ETA 59m39s
+Step  99050 .................................................. ETA 59m30s
+Step 100050 .................................................. ETA 59m22s
+Step 101050 .................................................. ETA 59m13s
+Step 102050 .................................................. ETA 59m04s
+Step 103050 .................................................. ETA 58m56s
+Step 104050 .................................................. ETA 58m47s
+Step 105050 .................................................. ETA 58m38s
+Step 106050 .................................................. ETA 58m30s
+Step 107050 .................................................. ETA 58m25s
+Step 108050 .................................................. ETA 58m16s
+Step 109050 .................................................. ETA 58m07s
+Step 110050 .................................................. ETA 57m58s
+Step 111050 .................................................. ETA 57m50s
+Step 112050 .................................................. ETA 57m41s
+Step 113050 .................................................. ETA 57m32s
+Step 114050 .................................................. ETA 57m23s
+Step 115050 .................................................. ETA 57m15s
+Step 116050 .................................................. ETA 57m06s
+Step 117050 .................................................. ETA 56m57s
+Step 118050 .................................................. ETA 56m48s
+Step 119050 .................................................. ETA 56m40s
+Step 120050 .................................................. ETA 56m31s
+Step 121050 .................................................. ETA 56m22s
+Step 122050 .................................................. ETA 56m13s
+Step 123050 .................................................. ETA 56m04s
+Step 124050 .................................................. ETA 55m56s
+Step 125050 .................................................. ETA 55m47s
+Step 126050 .................................................. ETA 55m38s
+Step 127050 .................................................. ETA 55m29s
+Step 128050 .................................................. ETA 55m20s
+Step 129050 .................................................. ETA 55m15s
+Step 130050 .................................................. ETA 55m06s
+Step 131050 .................................................. ETA 55m02s
+Step 132050 .................................................. ETA 54m56s
+Step 133050 .................................................. ETA 54m47s
+Step 134050 .................................................. ETA 54m38s
+Step 135050 .................................................. ETA 54m29s
+Step 136050 .................................................. ETA 54m21s
+Step 137050 .................................................. ETA 54m12s
+Step 138050 .................................................. ETA 54m03s
+Step 139050 .................................................. ETA 53m54s
+Step 140050 .................................................. ETA 53m45s
+Step 141050 .................................................. ETA 53m36s
+Step 142050 .................................................. ETA 53m27s
+Step 143050 .................................................. ETA 53m18s
+Step 144050 .................................................. ETA 53m11s
+Step 145050 .................................................. ETA 53m02s
+Step 146050 .................................................. ETA 52m54s
+Step 147050 .................................................. ETA 52m45s
+Step 148050 .................................................. ETA 52m36s
+Step 149050 .................................................. ETA 52m27s
+Step 150050 .................................................. ETA 52m18s
+Step 151050 .................................................. ETA 52m09s
+Step 152050 .................................................. ETA 52m00s
+Step 153050 .................................................. ETA 51m51s
+Step 154050 .................................................. ETA 51m42s
+Step 155050 .................................................. ETA 51m33s
+Step 156050 .................................................. ETA 51m24s
+Step 157050 .................................................. ETA 51m15s
+Step 158050 .................................................. ETA 51m06s
+Step 159050 .................................................. ETA 50m57s
+Step 160050 .................................................. ETA 50m48s
+Step 161050 .................................................. ETA 50m39s
+Step 162050 .................................................. ETA 50m30s
+Step 163050 .................................................. ETA 50m21s
+Step 164050 .................................................. ETA 50m12s
+Step 165050 .................................................. ETA 50m03s
+Step 166050 .................................................. ETA 49m54s
+Step 167050 .................................................. ETA 49m45s
+Step 168050 .................................................. ETA 49m36s
+Step 169050 .................................................. ETA 49m27s
+Step 170050 .................................................. ETA 49m18s
+Step 171050 .................................................. ETA 49m09s
+Step 172050 .................................................. ETA 49m00s
+Step 173050 .................................................. ETA 48m51s
+Step 174050 .................................................. ETA 48m42s
+Step 175050 .................................................. ETA 48m33s
+Step 176050 .................................................. ETA 48m24s
+Step 177050 .................................................. ETA 48m17s
+Step 178050 .................................................. ETA 48m08s
+Step 179050 .................................................. ETA 47m59s
+Step 180050 .................................................. ETA 47m50s
+Step 181050 .................................................. ETA 47m41s
+Step 182050 .................................................. ETA 47m32s
+Step 183050 .................................................. ETA 47m23s
+Step 184050 .................................................. ETA 47m14s
+Step 185050 .................................................. ETA 47m05s
+Step 186050 .................................................. ETA 46m56s
+Step 187050 .................................................. ETA 46m47s
+Step 188050 .................................................. ETA 46m38s
+Step 189050 .................................................. ETA 46m29s
+Step 190050 .................................................. ETA 46m20s
+Step 191050 .................................................. ETA 46m13s
+Step 192050 .................................................. ETA 46m04s
+Step 193050 .................................................. ETA 45m55s
+Step 194050 .................................................. ETA 45m46s
+Step 195050 .................................................. ETA 45m37s
+Step 196050 .................................................. ETA 45m28s
+Step 197050 .................................................. ETA 45m19s
+Step 198050 .................................................. ETA 45m10s
+Step 199050 .................................................. ETA 45m01s
+Step 200050 .................................................. ETA 44m52s
+Step 201050 .................................................. ETA 44m43s
+Step 202050 .................................................. ETA 44m35s
+Step 203050 .................................................. ETA 44m26s
+Step 204050 .................................................. ETA 44m17s
+Step 205050 .................................................. ETA 44m08s
+Step 206050 .................................................. ETA 43m59s
+Step 207050 .................................................. ETA 43m50s
+Step 208050 .................................................. ETA 43m40s
+Step 209050 .................................................. ETA 43m32s
+Step 210050 .................................................. ETA 43m23s
+Step 211050 .................................................. ETA 43m14s
+Step 212050 .................................................. ETA 43m05s
+Step 213050 .................................................. ETA 42m57s
+Step 214050 .................................................. ETA 42m48s
+Step 215050 .................................................. ETA 42m39s
+Step 216050 .................................................. ETA 42m30s
+Step 217050 .................................................. ETA 42m21s
+Step 218050 .................................................. ETA 42m14s
+Step 219050 .................................................. ETA 42m05s
+Step 220050 .................................................. ETA 41m55s
+Step 221050 .................................................. ETA 41m46s
+Step 222050 .................................................. ETA 41m39s
+Step 223050 .................................................. ETA 41m30s
+Step 224050 .................................................. ETA 41m21s
+Step 225050 .................................................. ETA 41m13s
+Step 226050 .................................................. ETA 41m05s
+Step 227050 .................................................. ETA 40m57s
+Step 228050 .................................................. ETA 40m49s
+Step 229050 .................................................. ETA 40m41s
+Step 230050 .................................................. ETA 40m34s
+Step 231050 .................................................. ETA 40m25s
+Step 232050 .................................................. ETA 40m20s
+Step 233050 .................................................. ETA 40m12s
+Step 234050 .................................................. ETA 40m04s
+Step 235050 .................................................. ETA 39m56s
+Step 236050 .................................................. ETA 39m48s
+Step 237050 .................................................. ETA 39m40s
+Step 238050 .................................................. ETA 39m30s
+Step 239050 .................................................. ETA 39m22s
+Step 240050 .................................................. ETA 39m13s
+Step 241050 .................................................. ETA 39m04s
+Step 242050 .................................................. ETA 38m56s
+Step 243050 .................................................. ETA 38m47s
+Step 244050 .................................................. ETA 38m38s
+Step 245050 .................................................. ETA 38m30s
+Step 246050 .................................................. ETA 38m22s
+Step 247050 .................................................. ETA 38m16s
+Step 248050 .................................................. ETA 38m08s
+Step 249050 .................................................. ETA 38m00s
+Step 250050 .................................................. ETA 37m51s
+Step 251050 .................................................. ETA 37m43s
+Step 252050 .................................................. ETA 37m36s
+Step 253050 .................................................. ETA 37m27s
+Step 254050 .................................................. ETA 37m20s
+Step 255050 .................................................. ETA 37m13s
+Step 256050 .................................................. ETA 37m05s
+Step 257050 .................................................. ETA 36m57s
+Step 258050 .................................................. ETA 36m49s
+Step 259050 .................................................. ETA 36m40s
+Step 260050 .................................................. ETA 36m32s
+Step 261050 .................................................. ETA 36m24s
+Step 262050 .................................................. ETA 36m21s
+Step 263050 .................................................. ETA 36m15s
+Step 264050 .................................................. ETA 36m07s
+Step 265050 .................................................. ETA 35m59s
+Step 266050 .................................................. ETA 35m51s
+Step 267050 .................................................. ETA 35m43s
+Step 268050 .................................................. ETA 35m35s
+Step 269050 .................................................. ETA 35m28s
+Step 270050 .................................................. ETA 35m21s
+Step 271050 .................................................. ETA 35m12s
+Step 272050 .................................................. ETA 35m04s
+Step 273050 .................................................. ETA 34m56s
+Step 274050 .................................................. ETA 34m48s
+Step 275050 .................................................. ETA 34m39s
+Step 276050 .................................................. ETA 34m31s
+Step 277050 .................................................. ETA 34m23s
+Step 278050 .................................................. ETA 34m16s
+Step 279050 .................................................. ETA 34m09s
+Step 280050 .................................................. ETA 34m00s
+Step 281050 .................................................. ETA 33m52s
+Step 282050 .................................................. ETA 33m44s
+Step 283050 .................................................. ETA 33m35s
+Step 284050 .................................................. ETA 33m26s
+Step 285050 .................................................. ETA 33m18s
+Step 286050 .................................................. ETA 33m08s
+Step 287050 .................................................. ETA 32m58s
+Step 288050 .................................................. ETA 32m50s
+Step 289050 .................................................. ETA 32m41s
+Step 290050 .................................................. ETA 32m33s
+Step 291050 .................................................. ETA 32m24s
+Step 292050 .................................................. ETA 32m15s
+Step 293050 .................................................. ETA 32m07s
+Step 294050 .................................................. ETA 31m58s
+Step 295050 .................................................. ETA 31m51s
+Step 296050 .................................................. ETA 31m43s
+Step 297050 .................................................. ETA 31m34s
+Step 298050 .................................................. ETA 31m27s
+Step 299050 .................................................. ETA 31m18s
+Step 300050 .................................................. ETA 31m11s
+Step 301050 .................................................. ETA 31m04s
+Step 302050 .................................................. ETA 30m55s
+Step 303050 .................................................. ETA 30m47s
+Step 304050 .................................................. ETA 30m37s
+Step 305050 .................................................. ETA 30m28s
+Step 306050 .................................................. ETA 30m19s
+Step 307050 .................................................. ETA 30m09s
+Step 308050 .................................................. ETA 30m00s
+Step 309050 .................................................. ETA 29m51s
+Step 310050 .................................................. ETA 29m41s
+Step 311050 .................................................. ETA 29m32s
+Step 312050 .................................................. ETA 29m23s
+Step 313050 .................................................. ETA 29m15s
+Step 314050 .................................................. ETA 29m06s
+Step 315050 .................................................. ETA 28m58s
+Step 316050 .................................................. ETA 28m49s
+Step 317050 .................................................. ETA 28m42s
+Step 318050 .................................................. ETA 28m33s
+Step 319050 .................................................. ETA 28m26s
+Step 320050 .................................................. ETA 28m17s
+Step 321050 .................................................. ETA 28m07s
+Step 322050 .................................................. ETA 27m59s
+Step 323050 .................................................. ETA 27m50s
+Step 324050 .................................................. ETA 27m42s
+Step 325050 .................................................. ETA 27m33s
+Step 326050 .................................................. ETA 27m24s
+Step 327050 .................................................. ETA 27m14s
+Step 328050 .................................................. ETA 27m05s
+Step 329050 .................................................. ETA 26m56s
+Step 330050 .................................................. ETA 26m47s
+Step 331050 .................................................. ETA 26m38s
+Step 332050 .................................................. ETA 26m30s
+Step 333050 .................................................. ETA 26m21s
+Step 334050 .................................................. ETA 26m12s
+Step 335050 .................................................. ETA 26m04s
+Step 336050 .................................................. ETA 25m55s
+Step 337050 .................................................. ETA 25m47s
+Step 338050 .................................................. ETA 25m40s
+Step 339050 .................................................. ETA 25m31s
+Step 340050 .................................................. ETA 25m22s
+Step 341050 .................................................. ETA 25m13s
+Step 342050 .................................................. ETA 25m04s
+Step 343050 .................................................. ETA 24m55s
+Step 344050 .................................................. ETA 24m46s
+Step 345050 .................................................. ETA 24m38s
+Step 346050 .................................................. ETA 24m30s
+Step 347050 .................................................. ETA 24m22s
+Step 348050 .................................................. ETA 24m14s
+Step 349050 .................................................. ETA 24m05s
+Step 350050 .................................................. ETA 23m56s
+Step 351050 .................................................. ETA 23m48s
+Step 352050 .................................................. ETA 23m40s
+Step 353050 .................................................. ETA 23m31s
+Step 354050 .................................................. ETA 23m22s
+Step 355050 .................................................. ETA 23m14s
+Step 356050 .................................................. ETA 23m05s
+Step 357050 .................................................. ETA 22m57s
+Step 358050 .................................................. ETA 22m48s
+Step 359050 .................................................. ETA 22m39s
+Step 360050 .................................................. ETA 22m31s
+Step 361050 .................................................. ETA 22m23s
+Step 362050 .................................................. ETA 22m14s
+Step 363050 .................................................. ETA 22m06s
+Step 364050 .................................................. ETA 21m57s
+Step 365050 .................................................. ETA 21m48s
+Step 366050 .................................................. ETA 21m39s
+Step 367050 .................................................. ETA 21m31s
+Step 368050 .................................................. ETA 21m22s
+Step 369050 .................................................. ETA 21m13s
+Step 370050 .................................................. ETA 21m04s
+Step 371050 .................................................. ETA 20m55s
+Step 372050 .................................................. ETA 20m47s
+Step 373050 .................................................. ETA 20m38s
+Step 374050 .................................................. ETA 20m29s
+Step 375050 .................................................. ETA 20m19s
+Step 376050 .................................................. ETA 20m11s
+Step 377050 .................................................. ETA 20m02s
+Step 378050 .................................................. ETA 19m53s
+Step 379050 .................................................. ETA 19m44s
+Step 380050 .................................................. ETA 19m35s
+Step 381050 .................................................. ETA 19m27s
+Step 382050 .................................................. ETA 19m18s
+Step 383050 .................................................. ETA 19m09s
+Step 384050 .................................................. ETA 19m00s
+Step 385050 .................................................. ETA 18m51s
+Step 386050 .................................................. ETA 18m42s
+Step 387050 .................................................. ETA 18m33s
+Step 388050 .................................................. ETA 18m24s
+Step 389050 .................................................. ETA 18m14s
+Step 390050 .................................................. ETA 18m05s
+Step 391050 .................................................. ETA 17m56s
+Step 392050 .................................................. ETA 17m47s
+Step 393050 .................................................. ETA 17m38s
+Step 394050 .................................................. ETA 17m29s
+Step 395050 .................................................. ETA 17m19s
+Step 396050 .................................................. ETA 17m10s
+Step 397050 .................................................. ETA 17m01s
+Step 398050 .................................................. ETA 16m51s
+Step 399050 .................................................. ETA 16m42s
+Step 400050 .................................................. ETA 16m33s
+Step 401050 .................................................. ETA 16m23s
+Step 402050 .................................................. ETA 16m14s
+Step 403050 .................................................. ETA 16m05s
+Step 404050 .................................................. ETA 15m56s
+Step 405050 .................................................. ETA 15m46s
+Step 406050 .................................................. ETA 15m37s
+Step 407050 .................................................. ETA 15m27s
+Step 408050 .................................................. ETA 15m18s
+Step 409050 .................................................. ETA 15m08s
+Step 410050 .................................................. ETA 14m59s
+Step 411050 .................................................. ETA 14m49s
+Step 412050 .................................................. ETA 14m40s
+Step 413050 .................................................. ETA 14m30s
+Step 414050 .................................................. ETA 14m20s
+Step 415050 .................................................. ETA 14m11s
+Step 416050 .................................................. ETA 14m02s
+Step 417050 .................................................. ETA 13m52s
+Step 418050 .................................................. ETA 13m43s
+Step 419050 .................................................. ETA 13m33s
+Step 420050 .................................................. ETA 13m24s
+Step 421050 .................................................. ETA 13m14s
+Step 422050 .................................................. ETA 13m04s
+Step 423050 .................................................. ETA 12m54s
+Step 424050 .................................................. ETA 12m45s
+Step 425050 .................................................. ETA 12m35s
+Step 426050 .................................................. ETA 12m25s
+Step 427050 .................................................. ETA 12m15s
+Step 428050 .................................................. ETA 12m05s
+Step 429050 .................................................. ETA 11m55s
+Step 430050 .................................................. ETA 11m46s
+Step 431050 .................................................. ETA 11m36s
+Step 432050 .................................................. ETA 11m25s
+Step 433050 .................................................. ETA 11m16s
+Step 434050 .................................................. ETA 11m06s
+Step 435050 .................................................. ETA 10m55s
+Step 436050 .................................................. ETA 10m45s
+Step 437050 .................................................. ETA 10m35s
+Step 438050 .................................................. ETA 10m25s
+Step 439050 .................................................. ETA 10m14s
+Step 440050 .................................................. ETA 10m05s
+Step 441050 .................................................. ETA  9m55s
+Step 442050 .................................................. ETA  9m45s
+Step 443050 .................................................. ETA  9m35s
+Step 444050 .................................................. ETA  9m25s
+Step 445050 .................................................. ETA  9m16s
+Step 446050 .................................................. ETA  9m06s
+Step 447050 .................................................. ETA  8m56s
+Step 448050 .................................................. ETA  8m46s
+Step 449050 .................................................. ETA  8m36s
+Step 450050 .................................................. ETA  8m26s
+Step 451050 .................................................. ETA  8m16s
+Step 452050 .................................................. ETA  8m06s
+Step 453050 .................................................. ETA  7m56s
+Step 454050 .................................................. ETA  7m46s
+Step 455050 .................................................. ETA  7m36s
+Step 456050 .................................................. ETA  7m26s
+Step 457050 .................................................. ETA  7m15s
+Step 458050 .................................................. ETA  7m05s
+Step 459050 .................................................. ETA  6m55s
+Step 460050 .................................................. ETA  6m45s
+Step 461050 .................................................. ETA  6m35s
+Step 462050 .................................................. ETA  6m25s
+Step 463050 .................................................. ETA  6m14s
+Step 464050 .................................................. ETA  6m04s
+Step 465050 .................................................. ETA  5m53s
+Step 466050 .................................................. ETA  5m43s
+Step 467050 .................................................. ETA  5m33s
+Step 468050 .................................................. ETA  5m22s
+Step 469050 .................................................. ETA  5m12s
+Step 470050 .................................................. ETA  5m01s
+Step 471050 .................................................. ETA  4m51s
+Step 472050 .................................................. ETA  4m41s
+Step 473050 .................................................. ETA  4m30s
+Step 474050 .................................................. ETA  4m20s
+Step 475050 .................................................. ETA  4m09s
+Step 476050 .................................................. ETA  3m59s
+Step 477050 .................................................. ETA  3m49s
+Step 478050 .................................................. ETA  3m38s
+Step 479050 .................................................. ETA  3m28s
+Step 480050 .................................................. ETA  3m18s
+Step 481050 .................................................. ETA  3m07s
+Step 482050 .................................................. ETA  2m57s
+Step 483050 .................................................. ETA  2m47s
+Step 484050 .................................................. ETA  2m36s
+Step 485050 .................................................. ETA  2m26s
+Step 486050 .................................................. ETA  2m16s
+Step 487050 .................................................. ETA  2m05s
+Step 488050 .................................................. ETA  1m55s
+Step 489050 .................................................. ETA  1m45s
+Step 490050 .................................................. ETA  1m34s
+Step 491050 .................................................. ETA  1m24s
+Step 492050 .................................................. ETA  1m13s
+Step 493050 .................................................. ETA  1m03s
+Step 494050 .................................................. ETA 52s
+Step 495050 .................................................. ETA 42s
+Step 496050 .................................................. ETA 32s
+Step 497050 .................................................. ETA 21s
+Step 498050 .................................................. ETA 11s
+Step 499050 ................................................
+End of trajectory file reached.
+
+
+##########   Main pass done   ##########
+
+500001 time steps processed.
+
+
+
+    Finishing analyses:
+----------------------------------------------------------------------------------------------------------
+
+      [####################################################################################################]
+
+    Performing linear regression on interval 7.20 - 600.00 ps...
+
+      Collective MSD(t) = 31.767627 + 5.257385 * t   (units: [col. MSD] = ps*S/m, [t] = ps).
+      R = 0.999737 (correlation coefficient)
+        conductivity = 5.257385 +/- 0.001247 pm^2/ps
+        y-intercept  = 31.767627 +/- 0.111704 pm^2
+
+      Non-weighted regression yields:
+        conductivity = 5.339188 +/- 0.002170 pm^2/ps
+        y-intercept  = 17.259782 +/- 0.756332 pm^2
+
+      Warning: Uncertainties for the non-weighted regression are only fit errors and do not include the uncertainty of the data itself.
+
+      Contributions to the conductivity:
+        C6H11N2: 3.455036 +/- 0.000054 S/m
+        C2N3: 4.044138 +/- 0.000066 S/m
+        C6H11N2/C6H11N2: -2.759534 +/- 0.000186 S/m
+        C2N3/C2N3: -2.011359 +/- 0.000500 S/m
+        C6H11N2/C2N3: 2.458250 +/- 0.000583 S/m
+
+      For the fitting procedures, the second half of each plot was used.
+      This is not necessarily correct, so please check the plot for the most linear part if R is too small (less than 0.99).
+
+
+      Ideal transference numbers based on the weighted regression (only self diffusion):
+        (since this is a binary system, true transference numbers don't have any meaning)
+        C6H11N2: 0.460722
+        C2N3: 0.539278
+      Writing file...
+        [######]
+
+      Writing results to "conduct_C6H11N2_#2_C2N3_#2.csv"...
+
+
+----------------------------------------------------------------------------------------------------------
+    Finished all analyses.
+
+
+    Analysis was running for 1h 57m 59s.
+      (70.632 steps per second)
+
+
+    Note: To show a list of all persons who contributed to TRAVIS,
+          please add "-credits" to your command line arguments, or set the
+          variable "SHOWCREDITS" to "TRUE" in your travis.conf file.
+
+    Source code from other projects used in TRAVIS:
+      - lmfit     from Joachim Wuttke
+      - kiss_fft  from Mark Borgerding
+      - voro++    from Chris Rycroft
+
+    http://www.travis-analyzer.de
+
+    Please cite all of the following articles for the analyses you have used:
+
+  * For TRAVIS in general:
+
+    "TRAVIS - A Free Analyzer for Trajectories from Molecular Simulation",
+    M. Brehm, M. Thomas, S. Gehrke, B. Kirchner; J. Chem. Phys. 2020, 152 (16), 164105.   (DOI 10.1063/5.0005078 )
+
+    "TRAVIS - A Free Analyzer and Visualizer for Monte Carlo and Molecular Dynamics Trajectories",
+    M. Brehm, B. Kirchner; J. Chem. Inf. Model. 2011, 51 (8), pp 2007-2023.   (DOI 10.1021/ci200217w )
+
+*** The End ***
+

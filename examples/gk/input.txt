@@ -1,0 +1,72 @@
+! TRAVIS input file
+! Created with TRAVIS version compiled at Feb 10 2026 15:59:49
+! Source code version: Jan 23 2025
+! Input file written at Mon Feb 23 17:13:35 2026.
+! I have read and acknowledged these facts and will obey them (y/n). [no] 
+y
+! I have acknowledged this note (y/n). [no] 
+y
+! Use the advanced mode until the analysis selection menu (y/n)? [no] 
+
+! Use these values (y) or enter different values (n)? [yes] 
+
+! Update cell geometry in every time step (i.e., NPT ensemble) (y) or use fixed cell (n)? [yes] 
+
+! Exclude Li atoms from bond recognition (y/n)? [yes] 
+
+! Continue with molecule recognition anyways (y/n)? [yes] 
+
+! Create images of the structural formulas (y/n)? [no] 
+
+! Accept these molecules (y) or change something (n)? [yes] 
+n
+! Please select: [done] 
+1
+! The radius of which element do you want to change (enter element label)? [done] 
+D
+! Please enter new bond radius for D in pm: [42.5] 
+0
+! Also remove this atom type from the system (y/n)? [no] 
+y
+! The radius of which element do you want to change (enter element label)? [done] 
+
+! Please select: [done] 
+
+! Create images of the structural formulas (y/n)? [no] 
+
+! Accept these molecules (y) or change something (n)? [yes] 
+
+! Which functions to compute (comma separated)?
+conduct
+! Use the advanced mode for the main part (y/n)? [no] 
+
+! Enter the physical time distance between successive trajectory frames in fs: [0.5] 
+1
+! Include molecule 1 (F2NO4S2) in conductivity calculation? [yes] 
+
+! Enter the charge of the molecule: [1.0] 
+-1
+! Which atom to take to represent molecule F2NO4S2 (e.g. "C1,O3")? [#2] 
+
+! Include molecule 2 (C4H10O2) in conductivity calculation? [yes] 
+n
+! Include molecule 3 (Li) in conductivity calculation? [yes] 
+
+! Enter the charge of the molecule: [1.0] 
+1
+! Enter the temperature in K: [300.0] 
+333.15
+! Use the Green-Kubo formulation (y) or the Einstein displacement (n)? [no] 
+y
+! Enter the depth of the correlation (in timesteps): [74985] 
+75000
+! Use decomposition of the conductivity into contributions from all charged species? [no] 
+y
+! Use mass-fixed (0), number-fixed (1) or solvent-fixed (2) frame of reference? [0] 
+0
+! In which trajectory frame to start processing the trajectory? [1] 
+
+! How many trajectory frames to read (from this position on)? [all] 
+
+! Use every n-th read trajectory frame for the analysis: [1] 
+
