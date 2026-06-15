@@ -1,5 +1,3 @@
-Command line:
-"/home/jingenm1_hpc/bin/travis_dev -beta -p /lustre/scratch/data/pzaby_hpc-conduct_md/for_johannes/lifsi_dme_clpol/1m_1:9/1/traj_prod_short.lmp -i input.txt"
 
 
   ________                                 __
@@ -26,21 +24,6 @@ Command line:
 
     There is absolutely no warranty on any results obtained from TRAVIS.
 
- #  Beta features enabled
- #  Running on node153 at Thu Jun  4 15:37:49 2026 (PID 163697)
- #  Running in /lustre/scratch/data/jingenm1_hpc-conductivity/travis/lifsi_dme_clpol/1m_1-9/new/1/gk/mass
- #  Version: Jan 23 2025, built at Jun  4 2026, 14:40:28, compiler "11.5.0 20240719 (Red Hat 11.5.0-5)", GCC 11.5.0
- #  Target platform: Linux, __cplusplus=201103L, Compile flags: DEBUG_ARRAYS 
- #  Machine: x86_64, char=8bits, int=4b, long=8b, addr=8b, 0xA0B0C0D0=D0,C0,B0,A0.
- #  Home: /home/jingenm1_hpc,  Executable: /home/jingenm1_hpc/bin/travis_dev
- #  Input from input.txt, Output is redirected
-
-    >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
-
-    Loading configuration from /home/jingenm1_hpc/.travis.conf ...
-      TRAVIS version has changed. You should write a new configuration file (specify "-writeconf").
-
-
     This is the BETA MODE of TRAVIS. You need to read and acknowledge the following facts:
 
     (1) The features in beta mode are not well tested or documented
@@ -56,7 +39,6 @@ Command line:
 
     I have read and acknowledged these facts and will obey them (y/n). [no] y
 
-    Opening position trajectory /lustre/scratch/data/pzaby_hpc-conduct_md/for_johannes/lifsi_dme_clpol/1m_1:9/1/traj_prod_short.lmp ...
     Analyzing LAMMPS trajectory column definition:
       - Field  1: element 
       - Field  2: xu      
